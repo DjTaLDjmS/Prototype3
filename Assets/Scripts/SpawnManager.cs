@@ -7,16 +7,22 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject obstablePrefab;
     private Vector3 spawnPosition = new Vector3(25, 0, 0);
+    private float startDelay = 2;
+    private float repeatRate = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(obstablePrefab, spawnPosition, obstablePrefab.transform.rotation);
+        InvokeRepeating("SpawObstacle", startDelay, repeatRate);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void SpawObstacle()
+    {
+        Instantiate(obstablePrefab, spawnPosition, obstablePrefab.transform.rotation);
     }
 }
