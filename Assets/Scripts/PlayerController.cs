@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     private float gravityModifier;
     [SerializeField]
     private bool isOnGround = true;
-    [SerializeField]
-    private bool gameOver;
+    
+    public bool gameOver;
     // Start is called before the first frame update
     void Start()
     {
