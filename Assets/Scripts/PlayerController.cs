@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     private float gravityModifier;
     [SerializeField]
     private bool isOnGround = true;
+    private Animator playerAnim;
     
     public bool gameOver;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        playerAnim= GetComponent<Animator>();
         Physics.gravity *= gravityModifier;
     }
 
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             isOnGround = false;
+            playerAnim.SetTrigger("Jump_trig");
         }
     }
 
