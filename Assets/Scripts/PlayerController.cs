@@ -7,15 +7,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     [SerializeField]
     private float jumpforce;
+
+    [SerializeField]
+    private ParticleSystem explosionParticle;
+    [SerializeField]
+    private ParticleSystem dirtParticle;
+    [SerializeField]
+    private AudioClip jumpSound;
+    [SerializeField]
+    private AudioClip crashSound;
+
     [SerializeField]
     private float gravityModifier;
     [SerializeField]
     private bool isOnGround = true;
     private Animator playerAnim;
-    [SerializeField]
-    private ParticleSystem explosionParticle;
-    [SerializeField]
-    private ParticleSystem dirtParticle;
 
     public bool gameOver;
     // Start is called before the first frame update
