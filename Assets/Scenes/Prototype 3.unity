@@ -363,6 +363,7 @@ MonoBehaviour:
   jumpforce: 700
   gravityModifier: 1.5
   isOnGround: 1
+  explosionParticle: {fileID: 1424504705}
   gameOver: 0
 --- !u!65 &259951799
 BoxCollider:
@@ -651,6 +652,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1424504705 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+  m_PrefabInstance: {fileID: 6072849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
